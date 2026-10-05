@@ -1,0 +1,23 @@
+{
+  "skill_name": "persuasion-check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "evals/files/weak-report/5_한장제안.md 를 대표에게 내기 전에 설득력 점검해 줘. 결정 정보는 1_결정할일.md, 근거는 3_분석노트.md와 코드/ 에 있어.",
+      "expected_output": "숨긴 약점 11개(weak-report_정답_숨긴약점11.md)를 찾는다: 제목이 분석 주제, 결론이 묻힘, 제약(개발 3일, 예산 500만 원) 무시, 결말 없음, 근거에 없는 30%, 원인을 사실처럼, 쿠폰 +32%p 불공정 비교, 비교 없는 61%, 다른 설명과 한계 없음, 대표에게 원본 표, 차트 축 55 시작과 강조 세 곳. 먼저 고칠 셋을 '지금 → 이렇게'로 쓰고, 근거 숫자는 number_check.py로 대조하고, 숫자를 새로 지어내지 않는다. 원본은 고치지 않는다. 반론 셋을 결정권자 역할로 던진다.",
+      "files": ["evals/files/weak-report/5_한장제안.md", "evals/files/weak-report/1_결정할일.md", "evals/files/weak-report/3_분석노트.md", "evals/files/weak-report/코드/report_chart.py"]
+    },
+    {
+      "id": 2,
+      "prompt": "이 보고서 괜찮아? 결정권자가 누군지는 아직 안 정했어.",
+      "expected_output": "점검을 시작하기 전에 결정권자, 기한, 선택지 세 가지만 묻고 멈춘다. 답 없이 형태 판정을 확정하지 않는다.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Review my one-page proposal before I send it to the CEO. The evidence folder is ./analysis.",
+      "expected_output": "영어 요청에도 트리거된다. 근거 폴더를 ./analysis로 잡고 number_check.py를 그 폴더로 돌린다. 결과물 원본은 고치지 않고 <이름>_설득점검.md를 쓴다.",
+      "files": []
+    }
+  ]
+}
